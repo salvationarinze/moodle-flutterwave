@@ -30,7 +30,7 @@ $publicKey = $this->get_config('pubKey');
 
 <?php
     if (isset($_POST['responseData'])) {
-        $data = json_decode($_POST['  '], true);
+        $data = json_decode($_POST['responseData'], true);
         $paid_amount = $data['amount'];
         $app_fee = $data['appfee'];
         $payment_status = $data['status']; // successful
