@@ -9,6 +9,7 @@ global $DB, $CFG;
 $amount = $cost;
 $publicKey = $this->get_config('pubKey');
 ?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!-- pay now -->
  <div style="text-align: center" id="raveView">
   <form>
@@ -87,7 +88,7 @@ $publicKey = $this->get_config('pubKey');
       
         if ($plugininstance->enrolperiod) {
             $timestart = time();
-            $timeend   = $timestart + $plugin_instance->enrolperiod;
+            $timeend   = $timestart + $plugininstance->enrolperiod;
         } else {
             $timestart = 0;
             $timeend   = 0;
@@ -97,14 +98,12 @@ $publicKey = $this->get_config('pubKey');
         if ((float) $paid_amount >= (float) $cost) {
             $plugin->enrol_user($plugininstance, $USER->id, $plugininstance->roleid, $timestart, $timeend);
             echo "<script type='text/javascript'>
-//                swal('Success', 'Payment successful', 'success');
-                    alert('Success')
+                swal('Success', 'Payment successful', 'success');
                window.location.href='.$CFG->wwwroot.'/course/view.php?id='. $instance->courseid;
                </script>";
         } else {
             echo "<script type='text/javascript'>
-//                swal('Error', 'Payment failed. Try again!', 'error');
-                    alert('Failure')
+                swal('Error', 'Payment failed. Try again!', 'error');
                </script>";
         }
     }

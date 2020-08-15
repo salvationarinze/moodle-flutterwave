@@ -20,4 +20,3 @@ Log in to your moodle site as an "admin user" and follow the following steps:
 
 This completes all the steps for the administrator's end. Now registered users can login to the Moodle site and view the course after a successful payment.
 
-https://youtu.be/4xw4dimDa5k
