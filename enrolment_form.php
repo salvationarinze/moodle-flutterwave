@@ -99,7 +99,7 @@ $publicKey = $this->get_config('pubKey');
             $plugin->enrol_user($plugininstance, $USER->id, $plugininstance->roleid, $timestart, $timeend);
             echo "<script type='text/javascript'>
                 swal('Success', 'Payment successful', 'success');
-               window.location.href='.$CFG->wwwroot.'/course/view.php?id='. $instance->courseid;
+               window.location.href='$CFG->wwwroot/course/view.php?id=$instance->courseid';
                </script>";
         } else {
             echo "<script type='text/javascript'>
