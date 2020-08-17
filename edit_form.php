@@ -39,6 +39,11 @@ class enrol_flutterwave_edit_form extends moodleform {
         $mform->addElement('select', 'roleid', get_string('assignrole', 'enrol_flutterwave'), $roles);
         $mform->setDefault('roleid', $plugin->get_config('roleid'));
 
+        $mform->addElement('text', 'customint3', get_string('maxenrolled', 'enrol_paystack'));
+        $mform->setDefault('maxenrolled', 'customint3');
+        $mform->addHelpButton('customint3', 'maxenrolled', 'enrol_paystack');
+        $mform->setType('customint3', PARAM_INT);
+
         $mform->addElement('duration', 'enrolperiod', get_string('enrolperiod', 'enrol_flutterwave'),
                            array('optional' => true, 'defaultunit' => 86400));
         $mform->setDefault('enrolperiod', $plugin->get_config('enrolperiod'));

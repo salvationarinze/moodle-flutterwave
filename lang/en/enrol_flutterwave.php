@@ -35,3 +35,7 @@ $string['flutterwave:unenrolself'] = 'Unenrol self from the course';
 $string['status'] = 'Allow Flutterwave enrolments';
 $string['status_desc'] = 'Allow users to use Flutterwave to enrol into a course by default.';
 $string['unenrolselfconfirm'] = 'Do you really want to unenrol yourself from course "{$a}"?';
+$string['maxenrolled'] = 'Max enrolled users';
+$string['maxenrolled_help'] = 'Specifies the maximum number of users that can flutterwavepayment-enrol. 0 means no limit.';
+$string['maxenrolledreached'] = 'Maximum number of users allowed to flutterwavepayment-enrol was already reached.';
+

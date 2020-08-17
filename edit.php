@@ -49,6 +49,7 @@ if ($mform->is_cancelled()) {
         $instance->cost = unformat_float($data->cost);
         $instance->currency = $data->currency;
         $instance->roleid = $data->roleid;
+        $instance->customint3 = $data->customint3;
         $instance->enrolperiod = $data->enrolperiod;
         $instance->enrolstartdate = $data->enrolstartdate;
         $instance->enrolenddate = $data->enrolenddate;
@@ -66,6 +67,7 @@ if ($mform->is_cancelled()) {
             'currency' => $data->currency,
             'roleid' => $data->roleid,
             'enrolperiod' => $data->enrolperiod,
+            'customint3' => $data->customint3,
             'enrolstartdate' => $data->enrolstartdate,
             'enrolenddate' => $data->enrolenddate
         );
