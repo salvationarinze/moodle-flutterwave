@@ -7,6 +7,7 @@ require_login();
 
 global $DB, $CFG;
 $amount = $cost;
+$localisedcost = format_float($cost, 2, true);
 $publicKey = $this->get_config('pubKey');
 ?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
