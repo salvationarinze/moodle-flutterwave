@@ -19,11 +19,11 @@ $publicKey = $this->get_config('pubKey');
         <button id="payWithRaveBtn" type="button" onClick="payWithRave()">
             <div style="padding-top: 5px; font-weight: bold; color: #171A21">
                 <img src="<?php echo $CFG->wwwroot; ?>/enrol/flutterwave/pix/icon.png">
-                <span style="padding-left: 5px">Pay with Rave</span>
+                <span style="padding-left: 5px">Click here to Enrol</span>
             </div>
             <img src="<?php echo $CFG->wwwroot; ?>/enrol/flutterwave/pix/flwbadge.png"
-                 style="width: 200px; padding: 5px 10px 8px;">
-            <div style="font-size: smaller; padding-bottom: 5px">
+                 style="width: 200px; padding: 5px 10px 4px;">
+            <div style="font-size: 12px; padding-bottom: 5px">
                 <?php echo '<b>'.get_string('cost')." is $instance->currency $localisedcost".'</b>';?>
             </div>
         </button>
@@ -179,8 +179,8 @@ if (isset($_POST['responseData'])) {
             amount: <?php echo $amount; ?>,
             currency: "<?php echo $instance->currency; ?>",
             customer: {
-                email: 'admin@coronaschools.com',
-                name: 'Corona Schools'
+                email: "<?php echo $USER->email;?>",
+                name: "<?php echo "$USER->firstname $USER->lastname";?>",
             },
 
             onclose: function () {
