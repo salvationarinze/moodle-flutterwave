@@ -185,7 +185,7 @@ if (isset($_POST['responseData'])) {
             },
 
             onclose: function () {
-                swal('Failed', 'Transaction was Cancelled', 'error', {
+                swal('', 'Transaction was Cancelled', 'error', {
                     button: "Close"
                 });
             },
