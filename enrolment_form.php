@@ -185,7 +185,9 @@ if (isset($_POST['responseData'])) {
             },
 
             onclose: function () {
-
+                swal('Failed', 'Transaction was Cancelled', 'error', {
+                    button: "Close"
+                });
             },
             callback: function (response) {
                 raveCheckout.close();
