@@ -1,4 +1,4 @@
-#Flutterwave Moodle Plugin
+# Flutterwave Moodle Plugin
 
 Enrolment in Moodle using Flutterwave payment gateway for paid courses.
 
