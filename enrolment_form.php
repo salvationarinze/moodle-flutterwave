@@ -192,14 +192,9 @@ if (isset($_POST['responseData'])) {
             callback: function (response) {
                 raveCheckout.close();
                 console.log(response);
-                // hide raveView
                 document.getElementById('raveView').style.display = 'none'
-
-                // show loaderView
                 document.getElementById('loaderView').style.display = 'block'
-
                 if (response.status === 'successful') {
-
                     swal({
                         title: 'Success',
                         text: 'Payment successful',
@@ -210,13 +205,11 @@ if (isset($_POST['responseData'])) {
                             visible: true
                         }
                     }).then((value) => {
-                        // redirect to a success page
                         document.getElementById('responseData').value = JSON.stringify(response)
                         document.getElementById('submitForm').submit()
 
                     });
                 } else {
-                    // redirect to a failure page.
                     swal('Error', response.data.response_parsed.message, 'error', {
                         button: "Close"
                     });
